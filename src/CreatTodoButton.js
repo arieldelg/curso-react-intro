@@ -1,6 +1,10 @@
+import './CreatTodoButton.css'
 const CreatTodoButton = () => {
     return (
-        <button>Crear</button>
+        <button onClick={
+            () => console.log('Hola')
+        }
+        >+</button>
     ); 
 }
 

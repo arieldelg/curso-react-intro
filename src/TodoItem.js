@@ -1,10 +1,10 @@
 import './TodoItem.css'
-const TodoItem = ({text}) => {
+const TodoItem = ({text, completed}) => {
     return (
       <li>
-        <span>V</span>
-        <p>{text}</p>
-        <span>X</span>
+        <span className={`complete ${completed && 'completeisTrue'}`}>V</span>
+        <p className={`${completed && 'textLine'}`}>{text}</p>
+        <span className='delete deleteHover'>X</span>
       </li>
     )
   };
