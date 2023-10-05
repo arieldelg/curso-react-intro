@@ -8,19 +8,21 @@ li {
     border-radius: 10px;
     margin: 10px 0;
     position: relative;
+    align-items: center;
 }
+
+/* TodoIcon */
 
 .delete {
     position: absolute;
-    top: -18px;
+    top: -25px;
     right: 10px;
     font-weight: bold;
-    font-size: 2.5rem;
-    
+    font-size: 3.5rem;
 }
 
-.delete:hover {
-    color: red;
+.delete:hover .Icon-svg{
+    fill: red;
     cursor: pointer;;
 }
 
@@ -29,9 +31,16 @@ li {
     font-weight:500;
 }
 
-.completeisTrue {
-    color: green;
+.complete:hover .Icon-svg{
+    fill: green;
 }
+
+.Icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Fin TodoIcon */
 
 .textLine {
     text-decoration: line-through;

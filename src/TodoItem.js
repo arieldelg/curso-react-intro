@@ -1,10 +1,23 @@
+import { RxCheck } from "react-icons/rx";
+import { AiOutlineClose } from "react-icons/ai";
+import React from "react";
 import './TodoItem.css'
-const TodoItem = ({text, completed}) => {
+import { CompleteIcon } from "./CompleteIcon";
+import { DeleteIcon } from "./DeleteIcon";
+
+const TodoItem = ({text, completed, onComplete, onDelete}) => {
     return (
       <li>
-        <span className={`complete ${completed && 'completeisTrue'}`}>V</span>
+        <CompleteIcon
+        completed={completed}
+        onComplete={onComplete}
+        />
+        {/* <span className={`complete ${completed && 'completeisTrue'}`} onClick={onComplete}><RxCheck /></span>  esto es con React-Icon*/}
         <p className={`${completed && 'textLine'}`}>{text}</p>
-        <span className='delete deleteHover'>X</span>
+        {/* <span className='delete deleteHover' onClick={onDelete}><AiOutlineClose/></span> esto es con React-Icon*/}
+        <DeleteIcon
+        onDelete={onDelete}
+        />
       </li>
     )
   };
