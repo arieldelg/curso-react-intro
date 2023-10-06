@@ -1,0 +1,23 @@
+li {
+    display: flex;
+    gap: 20px;
+    background-color:beige;
+    border: 1px #000000 solid;
+    padding: 10px;
+    width: 1000px;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    align-items: center;
+}
+
+.textLine {
+    text-decoration: line-through;
+}
+
+@media (max-width: 1000px) {
+    li {
+        width: 300px;
+    }
+    
+}
