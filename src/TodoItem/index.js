@@ -1,3 +1,4 @@
+
 import React from "react";
 import { CheckComponent } from "./CheckComponent";
 import { DeleteComponent } from "./DeleteComponent";
@@ -15,3 +16,4 @@ const TodoItem = ({ text, completed, done, deleteTodo }) => {
 }
 
 export {TodoItem}
+
