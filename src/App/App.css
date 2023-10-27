@@ -1,0 +1,244 @@
+.title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 36px 0 18px 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  padding: 0 8px;
+  outline-color: rgba(211, 211, 211, 0.568);
+  margin: 20px 0;
+  background: rgba(211, 211, 211, 0.568);
+  opacity: 0.8;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: white;
+  font-weight: normal;
+}
+
+.todo-list {
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.568);
+  width: 500px;
+  margin: 20px auto;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  width: 400px;
+  justify-content: flex-start;
+  margin: 20px 0;
+  background-color: antiquewhite;
+  height: fit-content;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  opacity: 10;
+  font-size: 1.8rem;
+  position: relative;
+  gap: 28px;
+}
+
+.more-task {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: none;
+  background-color: rgba(211, 211, 211, 0.705);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 6rem;
+  font-weight: 600;
+  transform: rotate(0);
+  transition: .2 ease;
+  z-index: 1;
+}
+
+.more-task:hover{
+  transform: rotate(224deg);
+}
+
+.todo-item {
+  font-size: 2.2rem;
+  font-weight: 350;
+}
+
+.todo-item-complete {
+  text-decoration: line-through;
+}
+
+.delete {
+  position: absolute;
+  top: -23px;
+  right: 5px;
+}
+
+.Icon-Svg-delete:hover {
+  fill: red;
+}
+
+.Icon-Svg {
+  width: 3.5rem;
+  cursor: pointer;
+}
+
+.Icon-Svg-completed:hover {
+  fill: green;
+}
+
+.estado-carga {
+  font-size: 2rem;
+}
+
+/* loading skeleton */
+
+.loading-skeleton {
+  list-style: none;
+  display: flex;
+  width: 400px;
+  justify-content: flex-start;
+  margin: 20px 0;
+  border: 1px transparent black;
+  height: 5.3rem;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
+  opacity: 10;
+  font-size: 1.8rem;
+  position: relative;
+  gap: 28px;
+}
+
+.Icon-Svg-loadingSkeleton {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+  border: 1px transparent black;
+}
+
+.Icon-Svg-loadingSkeleton-delete {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+  border: 1px transparent black;
+}
+
+.first-todo {
+  font-size: 3rem;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.modal-text {
+  width: 500px;
+  height: 300px;
+  background-color: rgba(114, 114, 114, 0.884);
+  margin: auto;
+  margin-top: 201px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-text {
+  padding: 28px 0 0 0;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.create-text ~ textarea {
+  background: rgb(36, 16, 16);
+  height: 100px;
+  border-radius: 4px;
+  border: none;
+  padding: 0 8px;
+  outline-color: rgba(211, 211, 211, 0.568);
+  margin-top: 20px ;
+  opacity: 0.8;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  width: 400px;
+}
+
+.button-container {
+  margin-top: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-close, .button-create {
+  padding: 10px 52px;
+  border-radius: 8px;
+  border: transparent;
+  font-size: 1.8rem;
+}
+
+.button-close:hover, .button-create:hover {
+  background-color: rgb(70, 70, 182);
+}
+
+.text-area {
+  width: 200px;
+  height: 80px;
+}
+
+
+.Icon-Svg-loadingSkeleton-delete, .Icon-Svg-loadingSkeleton, .loading-skeleton {
+  background: linear-gradient(95deg, rgba(219, 122, 122, 0.842), rgb(202, 202, 202));
+  background-size: 400% 400%;
+  animation: loadingAnimation 2s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
