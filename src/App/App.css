@@ -82,6 +82,7 @@ li {
 .todo-item {
   font-size: 2.2rem;
   font-weight: 350;
+  min-width: 250px;
 }
 
 .todo-item-complete {
